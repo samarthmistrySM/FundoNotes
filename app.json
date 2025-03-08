@@ -1,4 +1,5 @@
 {
   "name": "FundoNotes",
-  "displayName": "FundoNotes"
+  "displayName": "FundoNotes",
+  "plugins": ["@notifee/react-native"]
 }
