@@ -77,29 +77,8 @@ A feature-rich Google Keep clone built with React Native, implementing various n
 ### Home Screen
 <table>
   <tr>
-    <td><img src="assets/screenshots/HomeLight.png" width="200"></td>
     <td><img src="assets/screenshots/HomeNoBooks.png" width="200"></td>
-  </tr>
-</table>
-
-### Set Reminder
-<table>
-  <tr>
-    <td><img src="assets/screenshots/Reminder.png" width="200"></td>
-  </tr>
-</table>
-
-### Notes Section
-<table>
-  <tr>
-    <td><img src="assets/screenshots/NoteSelection.png" width="200"></td>
-  </tr>
-</table>
-
-### Dark Mode
-<table>
-  <tr>
-    <td><img src="assets/screenshots/HomeDark.png" width="200"></td>
+    <td><img src="assets/screenshots/HomeLight.png" width="200"></td>
   </tr>
 </table>
 
@@ -110,6 +89,22 @@ A feature-rich Google Keep clone built with React Native, implementing various n
     <td><img src="assets/screenshots/CustomDrawerDark.png" width="200"></td>
   </tr>
 </table>
+
+### Set Reminder
+<table>
+  <tr>
+    <td><img src="assets/screenshots/Reminder.png" width="200"></td>
+  </tr>
+</table>
+
+### Dark Mode
+<table>
+  <tr>
+    <td><img src="assets/screenshots/HomeDark.png" width="200"></td>
+    <td><img src="assets/screenshots/NoteSelection.png" width="200"></td>
+  </tr>
+</table>
+
 
 ## Future Enhancements
 - **Collaborative Notes** for multiple users to edit together.
