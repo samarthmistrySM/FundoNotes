@@ -1,97 +1,117 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# FundoNotes - React Native
 
-# Getting Started
+A feature-rich Google Keep clone built with React Native, implementing various navigations, note-taking functionalities, Firebase authentication, and additional utilities like dark mode and feedback.
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+## Features
 
-## Step 1: Start Metro
+### Navigation
+- **Custom Drawer Navigation** for seamless access to different sections.
+- **Stack Navigation** for smooth screen transitions.
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+### Note Management
+- **Create Notes** with various formats:
+    - Plain Text
+    - List Items
+    - Drawings (Sketch)
+    - Images
+- **Add Reminders** to notes for task management.
+- **Archive Notes** to store important notes separately.
+- **Delete Notes** with a bin/trash section for recovery.
+- **Pin Notes** for quick access to important notes.
+- **Search Notes** functionality to find notes easily.
+- **Label Notes** for better organization.
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+### Additional Features
+- **Dark Mode** for a better user experience in low-light environments.
+- **Feedback System** allowing users to share their experience.
+- **Drag & Drop Notes** to rearrange them easily.
+- **Cloud Sync** using Firebase to keep notes updated across devices.
+- **Authentication System** using Firebase for secure login and user management.
 
-```sh
-# Using npm
-npm start
+## Technologies Used
+- **React Native** for building the mobile application.
+- **Firebase** for authentication and real-time database:
+    - Firestore for storing notes and user data.
+    - Firebase Authentication for user login and signup.
+    - Firebase Cloud Storage for storing images and drawings.
+- **React Navigation** for handling multiple screens.
+- **Context API / Redux** (if used) for state management.
+- **AsyncStorage** for caching data locally.
 
-# OR using Yarn
-yarn start
-```
+## Installation & Setup
 
-## Step 2: Build and run your app
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/samarthmistrySM/FundoNotes.git
+   cd FundoNotes
+   ```
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
+2. Install dependencies:
+   ```sh
+   npm install
+   # or
+   yarn install
+   ```
 
-### Android
+3. Set up Firebase:
+    - Create a Firebase project in the [Firebase Console](https://console.firebase.google.com/).
+    - Enable Firestore Database and Firebase Authentication.
+    - Obtain your `GoogleService-Info.plist` (for iOS) files and place them in the appropriate directories.
+    - Configure Firebase in your project.
 
-```sh
-# Using npm
-npm run android
+4. Run the application:
+   ```sh
+   npx run ios       # For iOS (Mac only)
+   ```
 
-# OR using Yarn
-yarn android
-```
+## Screenshots
 
-### iOS
+### Authentication
+<table>
+  <tr>
+    <td><img src="assets/screenshots/Login.png" width="200"></td>
+    <td><img src="assets/screenshots/Register.png" width="200"></td>
+  </tr>
+</table>
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
+### Home Screen
+<table>
+  <tr>
+    <td><img src="assets/screenshots/HomeLight.png" width="200"></td>
+    <td><img src="assets/screenshots/HomeNoBooks.png" width="200"></td>
+  </tr>
+</table>
 
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
+### Set Reminder
+<table>
+  <tr>
+    <td><img src="assets/screenshots/Reminder.png" width="200"></td>
+  </tr>
+</table>
 
-```sh
-bundle install
-```
+### Notes Section
+<table>
+  <tr>
+    <td><img src="assets/screenshots/NoteSelection.png" width="200"></td>
+  </tr>
+</table>
 
-Then, and every time you update your native dependencies, run:
+### Dark Mode
+<table>
+  <tr>
+    <td><img src="assets/screenshots/HomeDark.png" width="200"></td>
+  </tr>
+</table>
 
-```sh
-bundle exec pod install
-```
+### Custom Drawer
+<table>
+  <tr>
+    <td><img src="assets/screenshots/CustomDrawerLight.png" width="200"></td>
+    <td><img src="assets/screenshots/CustomDrawerDark.png" width="200"></td>
+  </tr>
+</table>
 
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
-
-```sh
-# Using npm
-npm run ios
-
-# OR using Yarn
-yarn ios
-```
-
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
-
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
-
-## Step 3: Modify your app
-
-Now that you have successfully run the app, let's make changes!
-
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
-
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
-
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+## Future Enhancements
+- **Collaborative Notes** for multiple users to edit together.
+- **Voice Notes** support for adding voice recordings.
+- **Widgets** for quick note access.
