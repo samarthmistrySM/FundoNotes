@@ -16,7 +16,7 @@ const AlertContainer: FC<Props> = ({iconName, alert}) => {
         size={100}
         style={styles.icon}
         name={iconName}
-        color={theme === 'dark' ? '#fff' : '#777'}
+        color={theme === 'dark' ? '#999' : '#777'}
       />
       <Text
         style={[styles.noteText, {color: theme === 'dark' ? '#fff' : '#333'}]}>

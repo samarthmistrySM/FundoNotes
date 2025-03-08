@@ -66,10 +66,7 @@ const Login: FC = () => {
         <View style={styles.formContainer}>
           <View style={styles.inputContainer}>
             <TextInput
-              style={[
-                styles.input,
-                {color: theme === 'dark' ? '#fff' : '#999'},
-              ]}
+              style={[styles.input,{color: theme === 'dark' ? '#fff' : '#333'}]}
               placeholderTextColor={theme === 'dark' ? '#999' : '#999'}
               placeholder="Email"
               value={email}

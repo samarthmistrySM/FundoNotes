@@ -52,8 +52,8 @@ const SearchHeader: FC<Props> = ({
 
       <TextInput
         placeholder="Search your notes"
-        placeholderTextColor={theme === 'dark' ? '#fff' : '#333'}
-        style={styles.searchInput}
+        placeholderTextColor={theme === 'dark' ? '#999' : '#333'}
+        style={[styles.searchInput,{color: theme === 'dark' ? '#fff' : '#333'}]}
         onChangeText={setSearch}
         value={search}
       />

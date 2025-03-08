@@ -115,7 +115,7 @@ const styles = StyleSheet.create({
   floatingButton: {
     position: 'absolute',
     right: 30,
-    top: -30,
+    top: -35,
     width: 70,
     height: 70,
     borderRadius: 35,
@@ -124,11 +124,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     borderColor: '#f4f4f4',
     borderWidth: 5,
-    shadowColor: '#000',
-    shadowOffset: {width: 0, height: 4},
-    shadowOpacity: 0.1,
-    shadowRadius: 1,
-    elevation: 5,
   },
   plusIcon: {
     width: 100,

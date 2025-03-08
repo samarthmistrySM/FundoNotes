@@ -74,7 +74,7 @@ const Home = () => {
           {notes.length === 0 ? (
             <AlertContainer
               iconName={'lightbulb'}
-              alert={'No matching notes'}
+              alert={'Notes that you add appear here'}
             />
           ) : filteredNotes.length === 0 ? (
             <AlertContainer
