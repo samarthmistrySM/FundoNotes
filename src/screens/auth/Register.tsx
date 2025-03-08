@@ -13,6 +13,7 @@ import {
 import {NavigationProp, useNavigation} from '@react-navigation/native';
 import {AuthStackParamList} from '../../navigation/types.ts';
 import AuthContext from '../../context/AuthContext.tsx';
+import ThemeContext from "../../context/ThemeContext.tsx";
 
 const Register: FC = () => {
   const [firstName, setFirstName] = useState('');
@@ -22,6 +23,7 @@ const Register: FC = () => {
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const {register} = useContext(AuthContext);
+  const {theme} = useContext(ThemeContext);
 
   const handleRegister = async () => {
     try {
@@ -43,7 +45,7 @@ const Register: FC = () => {
   };
   const navigation = useNavigation<NavigationProp<AuthStackParamList>>();
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView style={[styles.container,{backgroundColor: theme === 'dark' ? '#333' : '#fff'},]}>
       <ScrollView contentContainerStyle={styles.scrollContainer}>
         <View style={styles.logoContainer}>
           <Image
@@ -52,13 +54,17 @@ const Register: FC = () => {
           />
         </View>
 
-        <Text style={styles.titleText}>Create your Google Keep Account</Text>
+        <Text style={[styles.titleText,{color: theme === 'dark' ? '#fff' : '#333'},]}>Create your Google Keep Account</Text>
 
         <View style={styles.formContainer}>
           <View style={styles.nameContainer}>
             <View style={[styles.inputContainer, styles.halfInput]}>
               <TextInput
-                style={styles.input}
+                  style={[
+                    styles.input,
+                    {color: theme === 'dark' ? '#fff' : '#999'},
+                  ]}
+                  placeholderTextColor={theme === 'dark' ? '#999' : '#999'}
                 placeholder="First name"
                 value={firstName}
                 onChangeText={setFirstName}
@@ -67,7 +73,11 @@ const Register: FC = () => {
 
             <View style={[styles.inputContainer, styles.halfInput]}>
               <TextInput
-                style={styles.input}
+                  style={[
+                    styles.input,
+                    {color: theme === 'dark' ? '#fff' : '#999'},
+                  ]}
+                  placeholderTextColor={theme === 'dark' ? '#999' : '#999'}
                 placeholder="Last name"
                 value={lastName}
                 onChangeText={setLastName}
@@ -77,7 +87,11 @@ const Register: FC = () => {
 
           <View style={styles.inputContainer}>
             <TextInput
-              style={styles.input}
+                style={[
+                  styles.input,
+                  {color: theme === 'dark' ? '#fff' : '#999'},
+                ]}
+                placeholderTextColor={theme === 'dark' ? '#999' : '#999'}
               placeholder="Email"
               value={email}
               onChangeText={setEmail}
@@ -87,7 +101,11 @@ const Register: FC = () => {
           </View>
           <View style={styles.inputContainer}>
             <TextInput
-              style={styles.input}
+                style={[
+                  styles.input,
+                  {color: theme === 'dark' ? '#fff' : '#999'},
+                ]}
+                placeholderTextColor={theme === 'dark' ? '#999' : '#999'}
               placeholder="Profile Image"
               value={image}
               onChangeText={setImage}
@@ -99,7 +117,11 @@ const Register: FC = () => {
           <View style={styles.passwordContainer}>
             <View style={[styles.inputContainer, styles.halfInput]}>
               <TextInput
-                style={styles.input}
+                  style={[
+                    styles.input,
+                    {color: theme === 'dark' ? '#fff' : '#999'},
+                  ]}
+                  placeholderTextColor={theme === 'dark' ? '#999' : '#999'}
                 placeholder="Password"
                 value={password}
                 onChangeText={setPassword}
@@ -109,7 +131,11 @@ const Register: FC = () => {
 
             <View style={[styles.inputContainer, styles.halfInput]}>
               <TextInput
-                style={styles.input}
+                  style={[
+                    styles.input,
+                    {color: theme === 'dark' ? '#fff' : '#999'},
+                  ]}
+                  placeholderTextColor={theme === 'dark' ? '#999' : '#999'}
                 placeholder="Confirm"
                 value={confirmPassword}
                 onChangeText={setConfirmPassword}
@@ -118,13 +144,13 @@ const Register: FC = () => {
             </View>
           </View>
 
-          <Text style={styles.helperText}>
+          <Text style={[styles.helperText,{color: theme === 'dark' ? '#999' : '#fff'},]}>
             Use 8 or more characters with a mix of letters, numbers & symbols
           </Text>
 
-          <View style={styles.showPasswordContainer}>
-            <TouchableOpacity style={styles.checkbox} />
-            <Text style={styles.showPasswordText}>Show password</Text>
+          <View style={[styles.showPasswordContainer]}>
+            <TouchableOpacity style={[styles.checkbox,{borderColor: '#dadce0'}]} />
+            <Text style={[styles.showPasswordText,{color: theme === 'dark' ? '#fff' : '#333'},]}>Show password</Text>
           </View>
         </View>
 

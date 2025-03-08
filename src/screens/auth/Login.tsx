@@ -13,11 +13,13 @@ import {
 import {NavigationProp, useNavigation} from '@react-navigation/native';
 import {AuthStackParamList} from '../../navigation/types.ts';
 import AuthContext from '../../context/AuthContext.tsx';
+import ThemeContext from '../../context/ThemeContext.tsx';
 
 const Login: FC = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const {login} = useContext(AuthContext);
+  const {theme} = useContext(ThemeContext);
   const navigation = useNavigation<NavigationProp<AuthStackParamList>>();
 
   const handleLogin = async () => {
@@ -32,9 +34,12 @@ const Login: FC = () => {
     }
   };
 
-
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView
+      style={[
+        styles.container,
+        {backgroundColor: theme === 'dark' ? '#333' : '#fff'},
+      ]}>
       <ScrollView contentContainerStyle={styles.scrollContainer}>
         <View style={styles.logoContainer}>
           <Image
@@ -43,13 +48,29 @@ const Login: FC = () => {
             resizeMode="contain"
           />
         </View>
-        <Text style={styles.titleText}>Sign in</Text>
-        <Text style={styles.subtitleText}>with your Google Keep Account</Text>
+        <Text
+          style={[
+            styles.titleText,
+            {color: theme === 'dark' ? '#fff' : '#333'},
+          ]}>
+          Sign in
+        </Text>
+        <Text
+          style={[
+            styles.subtitleText,
+            {color: theme === 'dark' ? '#999' : '#fff'},
+          ]}>
+          with your Google Keep Account
+        </Text>
 
         <View style={styles.formContainer}>
           <View style={styles.inputContainer}>
             <TextInput
-              style={styles.input}
+              style={[
+                styles.input,
+                {color: theme === 'dark' ? '#fff' : '#999'},
+              ]}
+              placeholderTextColor={theme === 'dark' ? '#999' : '#999'}
               placeholder="Email"
               value={email}
               onChangeText={setEmail}
@@ -60,11 +81,15 @@ const Login: FC = () => {
 
           <View style={styles.inputContainer}>
             <TextInput
-              style={styles.input}
+              style={[
+                styles.input,
+                {color: theme === 'dark' ? '#fff' : '#999'},
+              ]}
               placeholder="Password"
               value={password}
               onChangeText={setPassword}
               secureTextEntry
+              placeholderTextColor={theme === 'dark' ? '#999' : '#999'}
             />
           </View>
 
