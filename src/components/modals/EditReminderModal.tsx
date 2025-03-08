@@ -89,7 +89,6 @@ const EditReminderModal: FC<Props> = ({
               ))}
             </Picker>
 
-            {/* Hour Picker */}
             <Picker
               selectedValue={selectedHour}
               onValueChange={itemValue => setSelectedHour(itemValue.toString())}
@@ -100,7 +99,6 @@ const EditReminderModal: FC<Props> = ({
               ))}
             </Picker>
 
-            {/* Minute Picker */}
             <Picker
               selectedValue={selectedMinute}
               onValueChange={itemValue =>
@@ -122,7 +120,7 @@ const EditReminderModal: FC<Props> = ({
               />
               <Text style={styles.repeatText}>Repeat</Text>
               <TouchableOpacity
-                onPress={()=>setRepeatOption(!repeatOption)}
+                onPress={() => setRepeatOption(!repeatOption)}
                 style={styles.repeatToggle}>
                 <Text style={styles.repeatOptionText}>
                   {repeatOption ? 'Does not Repeat' : 'Repeats'}

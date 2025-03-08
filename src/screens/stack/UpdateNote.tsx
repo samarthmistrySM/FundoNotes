@@ -27,6 +27,7 @@ const UpdateNote: FC<Props> = ({route}) => {
 
   const handleModalClose = () => {
     setIsAddReminderModalOpen(false);
+    setIsEditReminderModalOpen(false);
   };
   const updateNote = (updatedNote: Note) => {
     handleUpdateNote(updatedNote);
