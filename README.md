@@ -79,6 +79,8 @@ A feature-rich Google Keep clone built with React Native, implementing various n
   <tr>
     <td><img src="assets/screenshots/HomeNoBooks.png" width="200"></td>
     <td><img src="assets/screenshots/HomeLight.png" width="200"></td>
+    <td><img src="assets/screenshots/Home2.png" width="200"></td>
+    <td><img src="assets/screenshots/Home3.png" width="200"></td>
   </tr>
 </table>
 
